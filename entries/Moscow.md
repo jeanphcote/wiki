@@ -1,0 +1,1 @@
+Moscow is the capital city of Russia.

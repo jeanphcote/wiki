@@ -1,0 +1,25 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+{% block title %}
+        
+    Random
+
+{% endblock %}
+
+{% block body %}
+
+    {{ content|safe }}<br>
+    <div>
+        <form method="get" action="{% url 'encyclopedia:edit' %}">
+            {% csrf_token %}
+            <input type="hidden" name="entry_title" value="{{ title }}"">
+            <!--<input type="hidden" name="entry_content" value="{{ content }}">-->
+            <button type="submit" name="edit_post_requ">
+              Edit this entry
+            </button>
+          </form>
+    </div>
+
+{% endblock %}
+
